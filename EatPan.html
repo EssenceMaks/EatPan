@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prandeo: Ціннісна Пропозиція та Візія Продукту</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* Light gray background */
+            color: #374151; /* Dark gray text */
+        }
+        .container {
+            max-width: 1200px;
+        }
+        .section-title {
+            color: #1f2937; /* Darker gray for titles */
+        }
+        .card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+        .priority-label {
+            font-size: 0.8em;
+            font-weight: 500;
+            padding: 2px 8px;
+            border-radius: 6px;
+            margin-left: 8px;
+        }
+        .priority-label.highest { background-color: #fef2f2; color: #ef4444; } /* Red */
+        .priority-label.very-high { background-color: #fffbeb; color: #f59e0b; } /* Orange */
+        .priority-label.high { background-color: #ecfdf5; color: #10b981; } /* Green */
+        .priority-label.medium { background-color: #eff6ff; color: #3b82f6; } /* Blue */
+        .priority-label.low { background-color: #f0f9ff; color: #0ea5e9; } /* Light Blue */
+        .priority-label.not-essential { background-color: #e0e7ff; color: #6366f1; } /* Indigo */
+
+        /* Specific colors for VPC sections */
+        .customer-profile-bg { background-color: #dbeafe; } /* Light blue for customer profile */
+        .value-proposition-bg { background-color: #e0f2fe; } /* Lighter blue for value prop */
+        .match-assessment-bg { background-color: #d1fae5; } /* Light green for match assessment */
+
+        .list-item {
+            padding: 8px 0;
+            border-bottom: 1px solid #e5e7eb; /* Light border between items */
+        }
+        .list-item:last-child {
+            border-bottom: none;
+        }
+
+        /* Table specific styles */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 24px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            overflow: hidden; /* Ensures rounded corners apply to content */
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+        .data-table th, .data-table td {
+            border: 1px solid #e5e7eb;
+            padding: 12px 16px;
+            text-align: left;
+            font-size: 0.95em;
+        }
+        .data-table th {
+            background-color: #f9fafb;
+            font-weight: 600;
+            color: #4b5563;
+            text-transform: uppercase;
+            font-size: 0.85em;
+        }
+        .data-table tbody tr:hover {
+            background-color: #f5f7fa;
+        }
+        /* Style for generated/missing data */
+        .generated-data {
+            background-color: #fefcbf; /* Light yellow */
+            border-left: 4px solid #f97316; /* Orange line on the left */
+        }
+    </style>
+</head>
+<body class="p-6 md:p-10">
+    <div class="container mx-auto">
+        <!-- Header -->
+        <header class="text-center mb-10">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-indigo-700 mb-4 rounded-xl p-4 bg-white shadow-lg">
+                Prandeo: Ціннісна Пропозиція та Візія Продукту
+            </h1>
+            <p class="text-xl text-gray-600">
+                (лат. обедать)
+            </p>
+        </header>
+
+        <!-- Product Vision Statement -->
+        <section class="card bg-purple-50 p-6 rounded-xl mb-8">
+            <h2 class="section-title text-3xl font-bold mb-4">Product Vision Statement</h2>
+            <p class="text-lg leading-relaxed text-gray-700">
+                Для <span class="font-semibold text-purple-700">людей, які прагнуть навести порядок у своєму харчуванні, покращити якість життя та зменшити щоденний стрес</span>, <span class="font-semibold text-purple-700">Prandeo</span> — це <span class="font-semibold text-purple-700">інтелектуальний мобільний додаток</span>, який <span class="font-semibold text-purple-700">персоналізує планування харчування, враховуючи наявні інгредієнти, відстеження свіжості та індивідуальні потреби</span>, на відміну від <span class="font-semibold text-purple-700">традиційних застосунків з рецептами чи ручного планування</span>. <span class="font-semibold text-purple-700">Наш продукт допомагає користувачам досягти гармонії, спокою та контролю, перетворюючи щоденне харчування з джерела стресу на основу для упорядкованого та здорового життя.</span>
+            </p>
+        </section>
+
+        <!-- Value Proposition Canvas Sections -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+            <!-- Customer Profile -->
+            <section class="card customer-profile-bg p-6 rounded-xl">
+                <h2 class="section-title text-3xl font-bold mb-6">Профіль споживача (Customer Profile)</h2>
+
+                <h3 class="text-2xl font-semibold mb-4 text-blue-800">Завдання клієнта (Customer Jobs)</h3>
+                <ul class="space-y-2 text-gray-700 text-lg">
+                    <li class="list-item flex justify-between items-center">Економити час та зменшувати стрес<span class="priority-label highest">Найважливіше</span></li>
+                    <li class="list-item flex justify-between items-center">Навчатися здоровому харчуванню<span class="priority-label very-high">Дуже важливо</span></li>
+                    <li class="list-item flex justify-between items-center">Планувати щоденне харчування та закупи<span class="priority-label high">Важливо</span></li>
+                    <li class="list-item flex justify-between items-center">Відстеження свіжості продуктів<span class="priority-label high">Важливо</span></li>
+                    <li class="list-item flex justify-between items-center">Підтримувати збалансований раціон<span class="priority-label high">Важливо</span></li>
+                    <li class="list-item flex justify-between items-center">Уникати алергенів та небажаних інгредієнтів<span class="priority-label high">Важливо</span></li>
+                    <li class="list-item flex justify-between items-center">Контролювати витрати на їжу<span class="priority-label medium">Середньо</span></li>
+                </ul>
+
+                <h3 class="text-2xl font-semibold mt-8 mb-4 text-blue-800">Проблеми клієнта (Customer Pains)</h3>
+                <ul class="space-y-2 text-gray-700 text-lg">
+                    <li class="list-item flex justify-between items-center">"Що приготувати?" щоденна дилема та високий рівень стресу<span class="priority-label high">Серйозна</span></li>
+                    <li class="list-item flex justify-between items-center">Незбалансований раціон/дефіцит нутрієнтів<span class="priority-label high">Серйозна</span></li>
+                    <li class="list-item flex justify-between items-center">Псування продуктів та зайві витрати<span class="priority-label high">Серйозна</span></li>
+                    <li class="list-item flex justify-between items-center">Страх алергічних реакцій/непереносимість<span class="priority-label high">Серйозна</span></li>
+                    <li class="list-item flex justify-between items-center">Складність врахування "всього" (холодильник, комора, огород)<span class="priority-label medium">Середня</span></li>
+                    <li class="list-item flex justify-between items-center">Недоступність якісної інформації про харчування<span class="priority-label medium">Середня</span></li>
+                    <li class="list-item flex justify-between items-center">Неконтрольовані витрати на їжу<span class="priority-label low">Несуттєва</span></li>
+                </ul>
+
+                <h3 class="text-2xl font-semibold mt-8 mb-4 text-blue-800">Вигоди клієнта (Customer Gains)</h3>
+                <ul class="space-y-2 text-gray-700 text-lg">
+                    <li class="list-item flex justify-between items-center">Спокій, впевненість та значна економія часу<span class="priority-label high">Необхідна</span></li>
+                    <li class="list-item flex justify-between items-center">Покращення здоров'я та самопочуття через знання<span class="priority-label high">Необхідна</span></li>
+                    <li class="list-item flex justify-between items-center">Контроль витрат та аналіз ринку<span class="priority-label high">Необхідна</span></li>
+                    <li class="list-item flex justify-between items-center">Безпека харчування та персоналізація<span class="priority-label high">Необхідна</span></li>
+                    <li class="list-item flex justify-between items-center">Зручність та автоматизація<span class="priority-label high">Необхідна</span></li>
+                    <li class="list-item flex justify-between items-center">Різноманітність раціону та кулінарних горизонтів<span class="priority-label not-essential">Не завадить</span></li>
+                    <li class="list-item flex justify-between items-center">Гармонія в домі та житті<span class="priority-label not-essential">Не завадить</span></li>
+                </ul>
+            </section>
+
+            <!-- Value Proposition -->
+            <section class="card value-proposition-bg p-6 rounded-xl">
+                <h2 class="section-title text-3xl font-bold mb-6">Ціннісна пропозиція (Value Proposition)</h2>
+
+                <h3 class="text-2xl font-semibold mb-4 text-blue-800">Продукти та послуги (Products & Services)</h3>
+                <ul class="space-y-2 text-gray-700 text-lg">
+                    <li class="list-item flex justify-between items-center">Персоналізований планувальник меню на 3+ дні<span class="priority-label high">Необхідний</span></li>
+                    <li class="list-item flex justify-between items-center">Інвентарний облік продуктів з відстеженням свіжості<span class="priority-label high">Необхідний</span></li>
+                    <li class="list-item flex justify-between items-center">Аналіз раціону та рекомендації по нутрієнтах/БАДах<span class="priority-label high">Необхідний</span></li>
+                    <li class="list-item flex justify-between items-center">Система виключення алергенів/небажаних продуктів<span class="priority-label high">Необхідний</span></li>
+                    <li class="list-item flex justify-between items-center">Генерація оптимізованих списків покупок<span class="priority-label high">Необхідний</span></li>
+                    <li class="list-item flex justify-between items-center">Модуль інтеграції з магазинами/доставками та аналізом цін (майбутнє)<span class="priority-label not-essential">Не завадить</span></li>
+                    <li class="list-item flex justify-between items-center">Експертний контент та рекомендації з харчування<span class="priority-label not-essential">Не завадить</span></li>
+                </ul>
+
+                <h3 class="text-2xl font-semibold mt-8 mb-4 text-blue-800">Фактори допомоги (Pain Relievers)</h3>
+                <ul class="space-y-2 text-gray-700 text-lg">
+                    <li class="list-item flex justify-between items-center">Автоматичний підбір рецептів та продумане планування<span class="priority-label high">Необхідний</span></li>
+                    <li class="list-item flex justify-between items-center">Відстеження свіжості продуктів та сповіщення<span class="priority-label high">Необхідний</span></li>
+                    <li class="list-item flex justify-between items-center">Персоналізовані рекомендації щодо збалансованості<span class="priority-label high">Необхідний</span></li>
+                    <li class="list-item flex justify-between items-center">Фільтри алергенів/небажаних інгредієнтів<span class="priority-label high">Необхідний</span></li>
+                    <li class="list-item flex justify-between items-center">Оптимізація списків покупок з урахуванням запасів<span class="priority-label high">Необхідний</span></li>
+                    <li class="list-item flex justify-between items-center">Простий та інтуїтивно зрозумілий інтерфейс<span class="priority-label not-essential">Не завадить</span></li>
+                    <li class="list-item flex justify-between items-center">Можливість додавати власні рецепти<span class="priority-label not-essential">Не завадить</span></li>
+                </ul>
+
+                <h3 class="text-2xl font-semibold mt-8 mb-4 text-blue-800">Фактори вигоди (Gain Creators)</h3>
+                <ul class="space-y-2 text-gray-700 text-lg">
+                    <li class="list-item flex justify-between items-center">Відчуття спокою, контролю та значної економії часу<span class="priority-label high">Необхідна</span></li>
+                    <li class="list-item flex justify-between items-center">Реальне покращення здоров'я та самопочуття завдяки усвідомленому харчуванню<span class="priority-label high">Необхідна</span></li>
+                    <li class="list-item flex justify-between items-center">Ефективний контроль витрат та обізнаність на ринку продуктів<span class="priority-label high">Необхідна</span></li>
+                    <li class="list-item flex justify-between items-center">Безпека та комфорт у харчуванні<span class="priority-label high">Необхідна</span></li>
+                    <li class="list-item flex justify-between items-center">Зручність та легкість у плануванні та приготуванні<span class="priority-label high">Необхідна</span></li>
+                    <li class="list-item flex justify-between items-center">Розширення кулінарних горизонтів та креативність<span class="priority-label not-essential">Не завадить</span></li>
+                    <li class="list-item flex justify-between items-center">Гармонійне та організоване домашнє життя<span class="priority-label not-essential">Не завадить</span></li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- Match Assessment -->
+        <section class="card match-assessment-bg p-6 rounded-xl mb-8">
+            <h2 class="section-title text-3xl font-bold mb-4">Оцінка відповідності (Match Assessment)</h2>
+            <div class="space-y-4 text-lg text-gray-700">
+                <p><strong>Наскільки добре ваша ціннісна пропозиція відповідає потребам клієнтів?</strong></p>
+                <ul class="list-disc ml-6 space-y-2">
+                    <li><span class="font-medium">Продумане ухвалення створення раціону</span> та <span class="font-medium">облік продуктів з відстеженням свіжості</span> безпосередньо закривають найважливіші завдання клієнтів: економія часу та зменшення стресу від планування, а також ефективне використання наявних продуктів. Це прямо вирішує біль "Що приготувати?" та проблему псування продуктів.</li>
+                    <li><span class="font-medium">Аналіз раціону, рекомендації по нутрієнтах/БАДах та система виключення алергенів</span> відповідають найсерйознішим болям, пов'язаним із незбалансованим харчуванням, дефіцитами та страхом алергічних реакцій. Це створює необхідні вигоди: покращення здоров'я, безпека та можливість навчатися.</li>
+                    <li><span class="font-medium">Генерація оптимізованих списків покупок</span> є прямим полегшенням болю від зайвих витрат та неефективних закупівель, забезпечуючи <span class="font-medium">контроль витрат та аналіз ринку</span>.</li>
+                </ul>
+
+                <p><strong>Які болі клієнта не закриваються існуючими продуктами ефективно?</strong></p>
+                <ul class="list-disc ml-6 space-y-2">
+                    <li>Комплексна інтеграція <span class="font-medium">продуманого ухвалення створення раціону</span>, <span class="font-medium">відстеження свіжості всіх наявних продуктів (холодильник, комора, огород)</span> та <span class="font-medium">персоналізованого нутрієнтного аналізу</span>.</li>
+                    <li>Ефективне зниження стресу від щоденного вибору їжі та її організації, перетворення рутини на усвідомлений та спокійний процес.</li>
+                </ul>
+
+                <p><strong>Які вигоди дійсно мають значення?</strong></p>
+                <ul class="list-disc ml-6 space-y-2">
+                    <li>Спокій, впевненість та значна економія часу.</li>
+                    <li>Покращення здоров'я та самопочуття через знання.</li>
+                    <li>Контроль витрат та аналіз ринку.</li>
+                    <li>Безпека харчування та персоналізація.</li>
+                    <li>Зручність та автоматизація.</li>
+                </ul>
+
+                <p><strong>Чи відповідає ваш продукт найважливішим вигодам та найкритичнішим болям клієнта?</strong></p>
+                <p>
+                    Так, Prandeo розроблений саме для того, щоб відповідати найважливішим вигодам (спокій, економія часу, здоров'я, контроль витрат) та найкритичнішим болям (стрес від планування, псування продуктів, незбалансованість, алергени). Це підтверджує сильний зв'язок між нашою ціннісною пропозицією та потребами споживача.
+                </p>
+            </div>
+        </section>
+
+        <!-- Value Proposition Statement & USP -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <section class="card bg-orange-50 p-6 rounded-xl">
+                <h2 class="section-title text-3xl font-bold mb-4">Value Proposition Statement</h2>
+                <p class="text-lg leading-relaxed text-gray-700">
+                    "Допомагаємо <span class="font-semibold text-orange-700">зайнятим людям та тим, хто прагне здорового способу життя, впорядкувати своє харчування</span>, за допомогою <span class="font-semibold text-orange-700">мобільного додатку Prandeo</span>, який <span class="font-semibold text-orange-700">зменшує щоденний стрес від планування їжі, відстежує свіжість продуктів та забезпечує збалансований раціон</span>, а також <span class="font-semibold text-orange-700">створює відчуття спокою, значно економить час, допомагає контролювати витрати та покращує загальне самопочуття завдяки знанням</span>."
+                </p>
+            </section>
+
+            <section class="card bg-green-50 p-6 rounded-xl">
+                <h2 class="section-title text-3xl font-bold mb-4">Unique Selling Proposition (USP)</h2>
+                <p class="text-lg leading-relaxed text-gray-700">
+                    <span class="font-semibold text-green-700">"Prandeo: твій помічник у плануванні харчування з наявних продуктів для спокою, економії та здоров'я."</span>
+                </p>
+            </section>
+        </div>
+
+        <!-- Contribution (Example) -->
+        <section class="card bg-gray-50 p-6 rounded-xl mb-12">
+            <h2 class="section-title text-3xl font-bold mb-4">Внесок у виконання домашнього завдання кожного з виконавців (приклад)</h2>
+            <div class="space-y-4 text-lg text-gray-700">
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800">Ім'я Виконавця 1 (Product Manager):</h3>
+                    <ul class="list-disc ml-6 mt-2 space-y-1">
+                        <li>Відповідальний за фасилітацію обговорення Product Vision Statement з командою.</li>
+                        <li>Ініціював brainstorm сесії для генерації завдань, проблем та вигод споживачів.</li>
+                        <li>Керував процесом пріоритизації елементів у Customer Profile.</li>
+                        <li>Формулював остаточні версії Value Proposition Statement та Unique Selling Proposition, забезпечуючи їхню відповідність візії продукту.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800">Ім'я Виконавця 2 (Business Analyst/Researcher):</h3>
+                    <ul class="list-disc ml-6 mt-2 space-y-1">
+                        <li>Провів дослідження ринку для виявлення реальних завдань та болів цільової аудиторії.</li>
+                        <li>Зібрав та систематизував інформацію для розділу "Продукти та послуги" та "Фактори допомоги/вигоди".</li>
+                        <li>Відповідав за наповнення та деталізацію всіх складових Value Proposition Canvas, забезпечуючи наявність мінімум 7 елементів у кожній складовій на початковому етапі.</li>
+                        <li>Брав участь у пріоритизації елементів та оцінці відповідності між ціннісною пропозицією та потребами клієнта.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800">Ім'я Виконавця 3 (UX/UI Designer):</h3>
+                    <ul class="list-disc ml-6 mt-2 space-y-1">
+                        <li>Надавав ідеї щодо потенційного інтерфейсу та функціоналу, які можуть вирішити проблеми користувачів (наприклад, зручний інтерфейс для інвентарного обліку, візуалізація аналізу раціону).</li>
+                        <li>Брав участь у формулюванні вигод, зосереджуючись на тому, як продукт покращить досвід користувача.</li>
+                        <li>Допомагав у візуалізації зв'язків між елементами Value Proposition Canvas.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Tables Section -->
+        <section class="mb-10">
+            <h2 class="section-title text-3xl font-bold mb-6 text-center">Детальні таблиці з профілю споживача та ціннісної пропозиції</h2>
+
+            <!-- Завдання клієнта Table -->
+            <div class="card p-6 rounded-xl mb-8">
+                <h3 class="text-2xl font-semibold mb-4 text-blue-800">Завдання клієнта</h3>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Завдання</th>
+                            <th>Пріоритизовані за важливістю завдання</th>
+                            <th>Відсортовані завдання (ключові 3-5)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Економити час та зменшувати стрес</td>
+                            <td>Найважливіше</td>
+                            <td class="generated-data">Економія часу та зниження стресу від планування харчування</td>
+                        </tr>
+                        <tr>
+                            <td>Навчатися здоровому харчуванню</td>
+                            <td>Дуже важливо</td>
+                            <td class="generated-data">Освоєння принципів здорового харчування та нутрієнтів</td>
+                        </tr>
+                        <tr>
+                            <td>Планувати щоденне харчування та закупи</td>
+                            <td>Важливо</td>
+                            <td class="generated-data">Оптимізація планування меню та списків покупок</td>
+                        </tr>
+                        <tr>
+                            <td>Відстеження свіжості продуктів</td>
+                            <td>Важливо</td>
+                            <td class="generated-data">Контроль свіжості та термінів придатності продуктів</td>
+                        </tr>
+                        <tr>
+                            <td>Підтримувати збалансований раціон</td>
+                            <td>Важливо</td>
+                            <td class="generated-data">Забезпечення повноцінного та збалансованого раціону</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Проблеми клієнта Table -->
+            <div class="card p-6 rounded-xl mb-8">
+                <h3 class="text-2xl font-semibold mb-4 text-blue-800">Проблеми клієнта</h3>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Біль</th>
+                            <th>Пріоритизовані за серйозністю болі</th>
+                            <th>Відсортовані болі (ключові 3-5)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>"Що приготувати?" щоденна дилема та високий рівень стресу</td>
+                            <td>Серйозна</td>
+                            <td class="generated-data">Відсутність ідей та стрес від щоденного планування</td>
+                        </tr>
+                        <tr>
+                            <td>Незбалансований раціон/дефіцит нутрієнтів</td>
+                            <td>Серйозна</td>
+                            <td class="generated-data">Дисбаланс раціону та брак важливих поживних речовин</td>
+                        </tr>
+                        <tr>
+                            <td>Псування продуктів та зайві витрати</td>
+                            <td>Серйозна</td>
+                            <td class="generated-data">Фінансові втрати та марнотратство через псування їжі</td>
+                        </tr>
+                        <tr>
+                            <td>Страх алергічних реакцій/непереносимість</td>
+                            <td>Серйозна</td>
+                            <td class="generated-data">Ризик вживання алергенів та небажаних інгредієнтів</td>
+                        </tr>
+                        <tr>
+                            <td>Складність врахування "всього" (холодильник, комора, огород)</td>
+                            <td>Середня</td>
+                            <td class="generated-data">Складність контролю всіх наявних продуктів</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Вигоди клієнта Table -->
+            <div class="card p-6 rounded-xl mb-8">
+                <h3 class="text-2xl font-semibold mb-4 text-blue-800">Вигоди клієнта</h3>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Вигода</th>
+                            <th>Пріоритизовані за необхідністю вигоди</th>
+                            <th>Відсортовані вигоди (ключові 3-5)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Спокій, впевненість та значна економія часу</td>
+                            <td>Необхідна</td>
+                            <td class="generated-data">Душевний спокій та економія особистого часу</td>
+                        </tr>
+                        <tr>
+                            <td>Покращення здоров'я та самопочуття через знання</td>
+                            <td>Необхідна</td>
+                            <td class="generated-data">Відчутне покращення здоров'я та енергії через освіту</td>
+                        </tr>
+                        <tr>
+                            <td>Контроль витрат та аналіз ринку</td>
+                            <td>Необхідна</td>
+                            <td class="generated-data">Фінансовий контроль та вигідні покупки продуктів</td>
+                        </tr>
+                        <tr>
+                            <td>Безпека харчування та персоналізація</td>
+                            <td>Необхідна</td>
+                            <td class="generated-data">Безпечне та адаптований раціон під індивідуальні потреби</td>
+                        </tr>
+                        <tr>
+                            <td>Зручність та автоматизація</td>
+                            <td>Необхідна</td>
+                            <td class="generated-data">Простота та швидкість у плануванні та готуванні їжі</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Продукти та послуги Table -->
+            <div class="card p-6 rounded-xl mb-8">
+                <h3 class="text-2xl font-semibold mb-4 text-blue-800">Продукти та послуги</h3>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Продукт/Послуга</th>
+                            <th>Пріоритизовані за значущістю</th>
+                            <th>Відсортовані продукти/послуги (ключові 3-5)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Персоналізований планувальник меню на 3+ дні</td>
+                            <td>Необхідний</td>
+                            <td class="generated-data">Модуль планування меню на кілька днів</td>
+                        </tr>
+                        <tr>
+                            <td>Інвентарний облік продуктів з відстеженням свіжості</td>
+                            <td>Необхідний</td>
+                            <td class="generated-data">Система управління запасами та свіжістю продуктів</td>
+                        </tr>
+                        <tr>
+                            <td>Аналіз раціону та рекомендації по нутрієнтах/БАДах</td>
+                            <td>Необхідний</td>
+                            <td class="generated-data">Інструмент для аналізу поживних речовин та рекомендацій</td>
+                        </tr>
+                        <tr>
+                            <td>Система виключення алергенів/небажаних продуктів</td>
+                            <td>Необхідний</td>
+                            <td class="generated-data">Функція виключення алергенів та небажаних інгредієнтів</td>
+                        </tr>
+                        <tr>
+                            <td>Генерація оптимізованих списків покупок</td>
+                            <td>Необхідний</td>
+                            <td class="generated-data">Автоматична генерація списків покупок</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Фактори допомоги Table -->
+            <div class="card p-6 rounded-xl mb-8">
+                <h3 class="text-2xl font-semibold mb-4 text-blue-800">Фактори допомоги</h3>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Фактор допомоги</th>
+                            <th>Пріоритизовані за цінністю</th>
+                            <th>Відсортовані фактори допомоги (ключові 3-5)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Автоматичний підбір рецептів та продумане планування</td>
+                            <td>Необхідний</td>
+                            <td class="generated-data">Усунення дилеми "що приготувати?"</td>
+                        </tr>
+                        <tr>
+                            <td>Відстеження свіжості продуктів та сповіщення</td>
+                            <td>Необхідний</td>
+                            <td class="generated-data">Зниження втрат від псування продуктів</td>
+                        </tr>
+                        <tr>
+                            <td>Персоналізовані рекомендації щодо збалансованості</td>
+                            <td>Необхідний</td>
+                            <td class="generated-data">Корекція дефіцитів нутрієнтів</td>
+                        </tr>
+                        <tr>
+                            <td>Фільтри алергенів/небажаних інгредієнтів</td>
+                            <td>Необхідний</td>
+                            <td class="generated-data">Забезпечення безпеки харчування</td>
+                        </tr>
+                        <tr>
+                            <td>Оптимізація списків покупок з урахуванням запасів</td>
+                            <td>Необхідний</td>
+                            <td class="generated-data">Економія часу та контроль витрат на покупки</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Фактори вигоди Table -->
+            <div class="card p-6 rounded-xl mb-8">
+                <h3 class="text-2xl font-semibold mb-4 text-blue-800">Фактори вигоди</h3>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Фактор вигоди</th>
+                            <th>Пріоритизовані за необхідністю</th>
+                            <th>Відсортовані фактори вигоди (ключові 3-5)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Відчуття спокою, контролю та значної економії часу</td>
+                            <td>Необхідна</td>
+                            <td class="generated-data">Зниження стресу та відчуття гармонії</td>
+                        </tr>
+                        <tr>
+                            <td>Реальне покращення здоров'я та самопочуття завдяки усвідомленому харчуванню</td>
+                            <td>Необхідна</td>
+                            <td class="generated-data">Підвищення енергії та загального добробуту</td>
+                        </tr>
+                        <tr>
+                            <td>Ефективний контроль витрат та обізнаність на ринку продуктів</td>
+                            <td>Необхідна</td>
+                            <td class="generated-data">Оптимізація бюджету та розумні фінансові рішення</td>
+                        </tr>
+                        <tr>
+                            <td>Безпека та комфорт у харчуванні</td>
+                            <td>Необхідна</td>
+                            <td class="generated-data">Впевненість у безпеці та зручності їжі</td>
+                        </tr>
+                        <tr>
+                            <td>Зручність та легкість у плануванні та приготуванні</td>
+                            <td>Необхідна</td>
+                            <td class="generated-data">Простий та інтуїтивний процес приготування</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Оцінка відповідності Table -->
+            <div class="card p-6 rounded-xl mb-8">
+                <h3 class="text-2xl font-semibold mb-4 text-blue-800">Оцінка відповідності</h3>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Завдання</th>
+                            <th>Біль</th>
+                            <th>Вигода</th>
+                            <th>Послуга</th>
+                            <th>Pain Reliever / Gain Creator</th>
+                            <th>Прямий вплив на Value Proposition / USP</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Економити час та зменшувати стрес</td>
+                            <td>"Що приготувати?" щоденна дилема та високий рівень стресу</td>
+                            <td>Спокій, впевненість та значна економія часу</td>
+                            <td>Персоналізований планувальник меню</td>
+                            <td>Автоматичний підбір рецептів та продумане планування</td>
+                            <td class="generated-data">Зниження стресу, економія часу, впорядковане життя.</td>
+                        </tr>
+                        <tr>
+                            <td>Навчатися здоровому харчуванню</td>
+                            <td>Незбалансований раціон/дефіцит нутрієнтів</td>
+                            <td>Покращення здоров'я та самопочуття через знання</td>
+                            <td>Аналіз раціону та рекомендації по нутрієнтах/БАДах</td>
+                            <td>Персоналізовані рекомендації щодо збалансованості</td>
+                            <td class="generated-data">Збалансований раціон, усвідомлене харчування, здоров'я.</td>
+                        </tr>
+                        <tr>
+                            <td>Відстеження свіжості продуктів</td>
+                            <td>Псування продуктів та зайві витрати</td>
+                            <td>Контроль витрат та аналіз ринку</td>
+                            <td>Інвентарний облік продуктів з відстеженням свіжості</td>
+                            <td>Відстеження свіжості продуктів та сповіщення</td>
+                            <td class="generated-data">Економія грошей, зменшення відходів.</td>
+                        </tr>
+                        <tr>
+                            <td>Уникати алергенів та небажаних інгредієнтів</td>
+                            <td>Страх алергічних реакцій/непереносимість</td>
+                            <td>Безпека харчування та персоналізація</td>
+                            <td>Система виключення алергенів/небажаних продуктів</td>
+                            <td>Фільтри алергенів/небажаних інгредієнтів</td>
+                            <td class="generated-data">Безпечне харчування, індивідуальний підхід.</td>
+                        </tr>
+                        <tr>
+                            <td>Контролювати витрати на їжу</td>
+                            <td>Неконтрольовані витрати на їжу</td>
+                            <td>Контроль витрат та аналіз ринку</td>
+                            <td>Генерація оптимізованих списків покупок</td>
+                            <td>Оптимізація списків покупок з урахуванням запасів</td>
+                            <td class="generated-data">Фінансовий контроль, розумні покупки.</td>
+                        </tr>
+                        <tr class="generated-data">
+                            <td>Планувати щоденне харчування</td>
+                            <td>Складність врахування "всього"</td>
+                            <td>Зручність та автоматизація</td>
+                            <td>Персоналізований планувальник меню</td>
+                            <td>Простий та інтуїтивно зрозумілий інтерфейс</td>
+                            <td class="generated-data">Легкість використання, ефективність планування.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+    </div>
+</body>
+</html>
